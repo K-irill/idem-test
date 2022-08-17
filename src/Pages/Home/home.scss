@@ -1,0 +1,36 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+  &__header {
+    text-align: center;
+    background: #c4c4c4;
+
+    .title {
+      margin: 35px 0;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      color: #000000;
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    background: #c4c4c4;
+
+    .footer-content {
+      margin: 35px 0;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      color: #000000;
+    }
+  }
+
+  &__main {
+    padding: 10px 13px;
+  }
+}

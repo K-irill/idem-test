@@ -1,0 +1,59 @@
+.block-three {
+  display: flex;
+  justify-content: space-between;
+  width: 743px;
+  height: 492px;
+  margin: 0 auto;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .item {
+      box-sizing: border-box;
+      display: flex;
+      align-items: flex-end;
+      width: 241px;
+      height: 241px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #000000;
+      padding: 15px;
+      background: #e3ebd3;
+
+      &__alert {
+        display: none;
+      }
+
+      &_image-bg {
+        position: relative;
+        cursor: pointer;
+        color: #ffffff;
+        background: url("../../images/ship.jpg");
+        transition: 1s;
+
+        &:hover {
+          transition: 1s;
+          filter: blur(15px);
+
+          .item__alert {
+            display: block;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+
+  &__items_large {
+    width: 492px;
+    height: 100%;
+    background: #e3ebd3;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+  }
+}
