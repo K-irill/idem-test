@@ -22,26 +22,48 @@
       color: #000000;
       padding: 15px;
       background: #e3ebd3;
+    }
 
-      &__alert {
-        display: none;
+    .item-alert {
+      position: relative;
+      width: 241px;
+      height: 241px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #000000;
+
+      .alert-img {
+        cursor: pointer;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 2s ease;
       }
 
       &_image-bg {
-        position: relative;
-        cursor: pointer;
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
         color: #ffffff;
         background: url("../../images/ship.jpg");
+        padding: 15px;
         transition: 1s;
+      }
 
-        &:hover {
+      &:hover {
+        .item-alert_image-bg {
           transition: 1s;
           filter: blur(15px);
+        }
 
-          .item__alert {
-            display: block;
-            position: absolute;
-          }
+        .alert-img {
+          display: block;
+          opacity: 1;
         }
       }
     }
