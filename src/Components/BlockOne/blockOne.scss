@@ -1,13 +1,14 @@
 .block-one {
   display: flex;
-  justify-content: space-between;
-  width: 743px;
+  max-width: 743px;
+  height: 492px;
   margin: 0 auto;
 
   &__text-field {
+    overflow: auto;
     box-sizing: border-box;
-    width: 492px;
-    height: 492px;
+    flex: 97%;
+    height: 100%;
     background: #a2a9b7;
     padding: 30px 46px 53px 25px;
     font-style: normal;
@@ -15,9 +16,15 @@
     font-size: 18px;
     text-align: center;
     color: #ffffff;
+
+    @media (max-width: 320px) {
+      padding: 10px;
+    }
   }
 
   &__items {
+    flex: 50%;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -31,11 +38,23 @@
       box-sizing: border-box;
       display: flex;
       align-items: flex-end;
-      justify-content: center;
-      padding-bottom: 15px;
-      width: 241px;
+      padding: 15px;
       height: 241px;
       background: #a2a9b7;
+
+      @media (max-width: 320px) {
+        height: 102px;
+      }
     }
+
+    @media (max-width: 320px) {
+      margin-left: 7px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    order: 2;
+    max-width: 320px;
+    height: 211px;
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import BlockFour from "../../Components/BlockFour";
 import BlockOne from "../../Components/BlockOne";
 import BlockThree from "../../Components/BlockThree";
 import BlockTwo from "../../Components/BlockTwo";
@@ -14,6 +15,7 @@ const Home = () => {
         <BlockOne />
         <BlockTwo />
         <BlockThree />
+        <BlockFour />
       </div>
       <div className="page__footer">
         <div className="footer-content">footer</div>

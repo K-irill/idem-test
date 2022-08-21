@@ -11,7 +11,7 @@ const BlockOne = () => {
         поэтому закон исключённого третьего индуцирует изоморфный ротор.
       </div>
       <div className="block-one__items">
-        <div className="item">Чувство однократно</div>
+        <div className="item item_top">Чувство однократно</div>
         <div className="item">Морено</div>
       </div>
     </div>

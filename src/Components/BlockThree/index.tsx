@@ -11,13 +11,39 @@ const BlockThree = () => {
           Понятие модернизации понимает механизм власти
         </div>
         <div className="item-alert">
-          <div className="item-alert_image-bg">Наши сотрудники</div>
           <Link to={"/dialog"}>
+            <div className="item-alert_image-bg">Наши сотрудники</div>
             <Alert className="alert-img" />
           </Link>
         </div>
       </div>
-      <div className="block-three__items_large"></div>
+      <div className="user-information">
+        <div className="item user-information__last-name">
+          <div className="title">Фамилия</div>
+          <div className="dashed"></div>
+          <div className="value">Мамай</div>
+        </div>
+        <div className="item user-information__first-name">
+          <div className="title">Имя и отчество</div>
+          <div className="dashed"></div>
+          <div className="value">Станиславаленина Владимировна</div>
+        </div>
+        <div className="item user-information__policy-number">
+          <div className="title">Номер полиса выдан заведомо ложный</div>
+          <div className="dashed"></div>
+          <div className="value">01354879</div>
+        </div>
+        <div className="item user-information__birthday">
+          <div className="title">Дата рождения</div>
+          <div className="dashed"></div>
+          <div className="value">01.12.1976</div>
+        </div>
+        <div className="item user-information__telephone">
+          <div className="title">Телефон</div>
+          <div className="dashed"></div>
+          <div className="value">+79254218069</div>
+        </div>
+      </div>
     </div>
   );
 };
