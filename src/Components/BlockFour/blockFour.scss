@@ -1,7 +1,7 @@
 .block-four {
   display: flex;
+  width: 100%;
   max-width: 743px;
-  height: 320px;
   margin: 10px auto 0 auto;
 
   &__items_small {
@@ -24,7 +24,23 @@
       &_red {
         margin-top: 10px;
         background: #f55e62;
+
+        @media (max-width: 320px) {
+          margin-top: 0;
+          margin-left: 10px;
+        }
       }
+
+      @media (max-width: 320px) {
+        flex: 50%;
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 320px) {
+      order: 2;
+      flex-direction: row;
+      margin-right: 0;
     }
   }
 
@@ -69,9 +85,14 @@
         }
       }
     }
+
+    @media (max-width: 320px) {
+      order: 1;
+    }
   }
 
   @media (max-width: 320px) {
     order: 3;
+    flex-direction: column;
   }
 }

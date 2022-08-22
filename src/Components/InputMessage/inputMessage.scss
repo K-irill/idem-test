@@ -1,6 +1,6 @@
 .form-message {
   width: 590px;
-  margin: 10px auto;
+  margin: 20px auto;
 
   &__input {
     box-sizing: border-box;
@@ -16,6 +16,10 @@
     font-size: 14px;
     color: #696969;
     resize: none;
+
+    &_error {
+      border: 1px solid red;
+    }
   }
 
   &__btn {
@@ -43,5 +47,12 @@
       background: #cccccc;
       box-shadow: none;
     }
+  }
+
+  .error {
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+    color: red;
   }
 }
