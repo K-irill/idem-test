@@ -19,8 +19,6 @@ const Dialog = () => {
     setMessages((prevMessages) => [...prevMessages, { value: message }]);
   };
 
-  const now = new Date();
-
   return (
     <div className="dialog">
       <div className="content">
