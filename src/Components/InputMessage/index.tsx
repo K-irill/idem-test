@@ -1,13 +1,17 @@
 import { Field, Form, Formik, FormikHelpers } from "formik";
 import * as Yup from "yup";
-import React from "react";
+import React, { FC } from "react";
 import "./inputMessage.scss";
 
-interface Values {
+interface IValues {
   message: string;
 }
 
-const InputMessage = () => {
+interface IInputMessage {
+  sendMessage: (value: string) => void;
+}
+
+const InputMessage: FC<IInputMessage> = ({ sendMessage }) => {
   const InputShema = Yup.object().shape({
     message: Yup.string().required("Обезательное поле"),
   });
@@ -19,21 +23,23 @@ const InputMessage = () => {
           message: "",
         }}
         onSubmit={(
-          values: Values,
-          { setSubmitting }: FormikHelpers<Values>
+          values: IValues,
+          { setSubmitting, resetForm }: FormikHelpers<IValues>
         ) => {
-          console.log(values);
+          sendMessage(values.message);
           setSubmitting(false);
+          resetForm();
         }}
         validateOnBlur
         validationSchema={InputShema}
       >
-        {({ errors, touched, dirty, isValid }) => (
+        {({ errors, touched, dirty, isValid, handleBlur }) => (
           <Form>
             <Field
               id={"message"}
               name={"message"}
               as="textarea"
+              onBlur={handleBlur}
               className={
                 !isValid && !dirty
                   ? "form-message__input form-message__input_error"
